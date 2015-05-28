@@ -1,5 +1,6 @@
 <?php
 require 'AllEvents.php';
+Use App\Contact;
 
 class MyEvents extends AllEvents
 {
@@ -37,7 +38,7 @@ class MyEvents extends AllEvents
 //        'onGetNormalizedJid',
 //        'onGetPrivacyBlockedList',
 //        'onGetProfilePicture',
-//        'onGetReceipt',
+        'onGetReceipt',
 //        'onGetRequestLastSeen',
 //        'onGetServerProperties',
 //        'onGetServicePricing',
@@ -67,7 +68,7 @@ class MyEvents extends AllEvents
 //        'onPresenceUnavailable',
 //        'onProfilePictureChanged',
 //        'onProfilePictureDeleted',
-//        'onSendMessage',
+        'onSendMessage',
 //        'onSendMessageReceived',
 //        'onSendPong',
 //        'onSendPresence',
@@ -77,13 +78,9 @@ class MyEvents extends AllEvents
 //        'onUploadFileFailed',
     );
 
-    public function onConnect($mynumber, $socket)
-    {
-        echo "<p>WooHoo!, Phone number $mynumber connected successfully!</p>";
-    }
+   
 
-    public function onDisconnect($mynumber, $socket)
-    {
-        echo "<p>Booo!, Phone number $mynumber is disconnected!</p>";
-    }
+   
+
+
 }
